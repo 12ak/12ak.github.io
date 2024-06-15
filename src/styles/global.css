@@ -121,3 +121,49 @@ body.position-left .navigation-container {
     display:block;
     margin:calc(1.5rem/4) 0 calc(1.5rem/2);
 }
+
+@media screen and (max-width: 800px) {
+
+.navigation {
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+body {
+    padding-top: 4rem /* height of index link */ 
+}
+
+body.position-left {
+    padding-left: 0
+}
+
+body.position-right {
+    padding-right: 0
+}
+
+.navigation-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 1;
+    background: #FFFFFF;
+}
+
+.navigation {
+        height: 2rem; /* height of index link */
+}
+
+input[name="toggle"]:checked+.navigation {
+    min-height: 100vh;
+}
+
+input[name="toggle"]+.navigation>*:not(.index-link) {
+    display: none;
+}
+
+input[name="toggle"]:checked+.navigation>*:not(.index-link) {
+    display: block;
+}
+
+}
